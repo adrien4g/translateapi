@@ -25,4 +25,4 @@ async function translate(lang, word){
     return translated
 }
 
-app.listen(port)
+app.listen(port);
