@@ -6,4 +6,4 @@ app.get('/', (req, res)=>{
     res.json({"cavalo":"opa"})
 })
 
-app.listen(3001)
+app.listen(8080)
