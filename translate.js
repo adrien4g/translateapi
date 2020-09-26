@@ -23,7 +23,12 @@ class Translate{
     }
 
     async start(){
-        this.browser = await this.puppeteer.launch()
+        this.browser = await this.puppeteer.launch({
+            'args' : [
+              '--no-sandbox',
+              '--disable-setuid-sandbox'
+            ]
+          })
         this.page = await this.browser.newPage()
         
         
