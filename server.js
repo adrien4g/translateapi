@@ -16,7 +16,7 @@ app.get('/',async (req, res)=>{
     const word  = req.query.word
     const lang  = req.query.lang
     const translated = await translate(lang, word)
-    res.send(translated)
+    res.json({"translate":word,"lang":lang,"translated":translated})
 })
 
 async function translate(lang, word){
