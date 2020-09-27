@@ -11,11 +11,13 @@ const app = express()
     await browser.start()
 })()
 
-console.log('acho que foi cu')
 app.get('/',async (req, res)=>{
     const word  = req.query.word
     const lang  = req.query.lang
-    const translated = await translate(lang, word)
+    if(word == null || lang == null){
+        return res.json({"error":"Define lang and word as query params."})
+    }
+    //const translated = await translate(lang, word)
     res.json({"translate":word,"lang":lang,"translated":translated})
 })
 
