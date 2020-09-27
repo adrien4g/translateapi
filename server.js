@@ -17,7 +17,7 @@ app.get('/',async (req, res)=>{
     if(word == null || lang == null){
         return res.json({"error":"Define lang and word as query params."})
     }
-    //const translated = await translate(lang, word)
+    const translated = await translate(lang, word)
     res.json({"translate":word,"lang":lang,"translated":translated})
 })
 
