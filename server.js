@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const languages = require('fs').readFileSync('ISO6391', 'utf8').split('\n')
 const Translate = require('./translate')
 
