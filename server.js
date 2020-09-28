@@ -5,6 +5,7 @@ const Translate = require('./translate')
 var browser
 var port = process.env.PORT || 8080
 const app = express()
+app.use(cors())
 
 ;(async ()=>{
     browser = await new Translate
